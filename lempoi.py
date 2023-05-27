@@ -1,13 +1,26 @@
 import streamlit as st
 import pandas as pd
 
-# Create a sample DataFrame with time data
-data = {
-    'Event': [st.text_input, 'Lunch', 'Presentation'],
-    'Time': ['09:00', '12:30', '15:45']
-}
+# Create an empty DataFrame
+df = pd.DataFrame(columns=['Event', 'Time'])
 
-df = pd.DataFrame(data)
+# Add a new row to the DataFrame based on user input
+def add_event():
+    event = st.text_input("Event")
+    time = st.selectbox("Time", ['09:00', '12:30', '15:45'])  # Use a selectbox for time selection
+
+    if st.button("Add"):
+        df.loc[len(df)] = [event, time]
 
 # Display the DataFrame as a table in Streamlit
-st.table(df)
+def display_table():
+    st.table(df)
+
+# Main Streamlit app
+def main():
+    st.title("Time Table")
+    add_event()
+    display_table()
+
+if __name__ == '__main__':
+    main()
