@@ -3,7 +3,7 @@ import pandas as pd
 
 # Create a sample DataFrame with time data
 data = {
-    'Event': ['Meeting', 'Lunch', 'Presentation'],
+    'Event': [st.text_input, 'Lunch', 'Presentation'],
     'Time': ['09:00', '12:30', '15:45']
 }
 
