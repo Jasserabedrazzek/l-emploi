@@ -17,7 +17,8 @@ def add_event():
 
 # Display the DataFrame as a table in Streamlit
 def display_table():
-    st.table(df)
+    for i in range(19):
+        st.table(df)
 
 # Main Streamlit app
 def main():
