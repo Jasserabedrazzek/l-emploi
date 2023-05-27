@@ -1,11 +1,13 @@
-
 import streamlit as st
 import pandas as pd
-import numpy as np
-for i in range(5):
-   df = pd.DataFrame(
-      np.random.randn(10, 5),
 
-      columns=('col %d'))
+# Create a sample DataFrame with time data
+data = {
+    'Event': ['Meeting', 'Lunch', 'Presentation'],
+    'Time': ['09:00', '12:30', '15:45']
+}
 
+df = pd.DataFrame(data)
+
+# Display the DataFrame as a table in Streamlit
 st.table(df)
