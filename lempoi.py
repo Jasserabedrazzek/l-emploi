@@ -15,4 +15,5 @@ while True:
     else:
         break
 
+# Display the table
 st.table(df)
