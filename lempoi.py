@@ -11,12 +11,11 @@ for i in range(1,19):
     D[i] = st.date_input(
         "When\'s ?",
         datetime.date(2019, 7, i))
-    
-events = [
-    {'Event': st.text_input(""), 'Date': '2023-06-10'},
-    {'Event': 'Event 2', 'Date': '2023-06-15'},
-    {'Event': 'Event 3', 'Date': '2023-06-20'}
-]
+for i in range(1,19):  
+    events = [
+        {'Event':T[i], 'Date': D[i]},
+       
+    ]
 
 # Convert event data to a Pandas DataFrame
 df = pd.DataFrame(events)
