@@ -1,20 +1,18 @@
 import streamlit as st
 import pandas as pd
-from numpy import *
-n = 0
-# Create an empty DataFrame*
-ok = False
-while ok == False:
-  add = st.button("ADD")
-  if add:
-    n+=1
-  T = array([str]*n)
-  for i in range(n):
-    T[i] = st.text_input(f"envent {i}:")
-    
+
+# Create an empty DataFrame
 df = pd.DataFrame(columns=['Event', 'Time'])
 
-
+n = 0
+while True:
+    add = st.button("ADD")
+    if add:
+        n += 1
+        event = st.text_input(f"Event {n}:")
+        time = st.text_input(f"Time {n}:")
+        df = df.append({'Event': event, 'Time': time}, ignore_index=True)
+    else:
+        break
 
 st.table(df)
-# Add a new row to the DataFrame based on user input
