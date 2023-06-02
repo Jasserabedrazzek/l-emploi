@@ -1,10 +1,17 @@
 import streamlit as st
 import pandas as pd
 from numpy import *
+import datetime
+
 T = array([str]*19)
+D = array([str]*19)
 # Sample event data
 for i in range(1,19):
     T[i] = st.text_input(f'envent {i} :')
+    D[i] =d = st.date_input(
+        "When\'s ?",
+        datetime.date(2023, 6, 2))
+    
 events = [
     {'Event': st.text_input(""), 'Date': '2023-06-10'},
     {'Event': 'Event 2', 'Date': '2023-06-15'},
