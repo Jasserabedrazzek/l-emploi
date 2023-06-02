@@ -1,19 +1,15 @@
 import streamlit as st
 import pandas as pd
 
-# Create an empty DataFrame
-df = pd.DataFrame(columns=['Event', 'Time'])
+# Sample event data
+events = [
+    {'Event': 'Event 1', 'Date': '2023-06-10', 'Location': 'City A'},
+    {'Event': 'Event 2', 'Date': '2023-06-15', 'Location': 'City B'},
+    {'Event': 'Event 3', 'Date': '2023-06-20', 'Location': 'City C'}
+]
 
-n = 0
-while True:
-    add = st.button("ADD")
-    if add:
-        n += 1
-        event = st.text_input(f"Event {n}:")
-        time = st.text_input(f"Time {n}:")
-        df = df.append({'Event': event, 'Time': time}, ignore_index=True)
-    else:
-        break
+# Convert event data to a Pandas DataFrame
+df = pd.DataFrame(events)
 
-# Display the table
+# Display the table using Streamlit
 st.table(df)
