@@ -9,7 +9,8 @@ D = array([str]*19)
 for i in range(1,19):
     T[i] = st.text_input(f'envent {i} :')
     D[i] = st.date_input(
-        "When\'s ?")
+        "When\'s ?",
+        datetime.date(2019, 7, 6))
     
 events = [
     {'Event': st.text_input(""), 'Date': '2023-06-10'},
