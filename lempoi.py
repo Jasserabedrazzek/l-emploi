@@ -11,8 +11,6 @@ events = [
 # Convert event data to a Pandas DataFrame
 df = pd.DataFrame(events)
 
-# Add text input column
-df['Status'] = df['Status'].apply(st.text_input, args=('Enter status',))
 
 # Display the table using Streamlit
 st.table(df)
