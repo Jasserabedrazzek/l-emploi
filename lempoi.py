@@ -18,7 +18,7 @@ for i in range(1,19):
     ]
 
 # Convert event data to a Pandas DataFrame
-df = pd.DataFrame(events)
+    df = pd.DataFrame(events)
 
 
 # Display the table using Streamlit
