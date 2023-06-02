@@ -5,7 +5,7 @@ import datetime
 
 T = array([str]*19)
 D = array([str]*19)
-df = array([str]*19)
+
 # Sample event data
 for i in range(1,19):
     T[i] = st.text_input(f'envent {i} :')
@@ -19,7 +19,7 @@ for i in range(1,19):
     ]
 
 # Convert event data to a Pandas DataFrame
-    df[i] = pd.DataFrame(events)
+    df = pd.DataFrame(events)
 
 
 # Display the table using Streamlit
