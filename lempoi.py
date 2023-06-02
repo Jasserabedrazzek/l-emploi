@@ -22,4 +22,4 @@ for i in range(1,19):
 
 
 # Display the table using Streamlit
-st.table(df)
+    st.table(df)
