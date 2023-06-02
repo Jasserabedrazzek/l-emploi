@@ -8,7 +8,7 @@ D = array([str]*19)
 # Sample event data
 for i in range(1,19):
     T[i] = st.text_input(f'envent {i} :')
-    D[i] =d = st.date_input(
+    D[i] = st.date_input(
         "When\'s ?")
     
 events = [
