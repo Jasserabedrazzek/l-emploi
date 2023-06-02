@@ -4,31 +4,8 @@ import numpy as np
 import datetime
 import streamlit.components.v1 as components
 
-# Define the HTML code for the calendar widget
-calendar_html = """
-<style>
-    .widget-calendar {
-        width: 100%;
-        height: 500px;
-        border: none;
-    }
-</style>
-<div id="calendar" class="widget-calendar"></div>
-<script>
-    // Initialize the calendar widget
-    const calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
-        // Customize the calendar options here
-        initialView: 'dayGridMonth'
-        // Add more options as needed
-    });
 
-    // Render the calendar
-    calendar.render();
-</script>
-"""
 
-# Render the calendar widget using the HTML code
-components.html(calendar_html, scrolling=True)
 # Sample event data
 events = []
 
