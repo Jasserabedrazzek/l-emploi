@@ -9,10 +9,10 @@ while ok == False:
   if add:
     n+=1
   T = array([str]*n)
-  for i n range(n):
+  for i in range(n):
     T[i] = st.text_input(f"envent {i}:")
     
-df = pd.DataFrame(columns=['Event', 'Time'],for i in range(5))
+df = pd.DataFrame(columns=['Event', 'Time'])
 
 
 
